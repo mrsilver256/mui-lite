@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "lib": ["es6", "dom"],
+    "sourceMap": false,
+    "allowJs": true,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "rootDir": "src",
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "outDir": "js",
+    "baseUrl": "src",
+    "downlevelIteration": true,
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "components/*": ["components/*"],
+      "UI/*": ["components/UI/*"],
+      "UIKit/*": ["components/UI/Kit/*"],
+      "UIKitBeta/*": ["components/UIKit/*"],
+      "db": ["store/database"],
+      "translate": ["strings/index"],
+      "store/*": ["store/*"],
+      "libs/*": ["libs/*"],
+      "dbconfig": ["store/dev.config"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}

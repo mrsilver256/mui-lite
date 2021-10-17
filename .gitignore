@@ -1,0 +1,9 @@
+.idea/*
+js/*
+yarn-error.log
+yarn.lock
+public/*
+mobile/*
+node_modules/*
+.firebase/*
+.DS_Store

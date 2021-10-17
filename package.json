@@ -1,0 +1,56 @@
+{
+  "name": "mui-lite",
+  "version": "1.0.0",
+  "description": "A lite yet functional version of material ui",
+  "main": "js/output/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode=production",
+    "dev": "webpack-dev-server --content-base public --hot --inline --mode=development --watch --host 0.0.0.0 --port 3000"
+  },
+  "author": "Thanh H. Chu",
+  "license": "ISC",
+  "dependencies": {
+    "dts-bundle": "^0.7.3",
+    "lodash": "^4.17.11",
+    "moment": "^2.26.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "styled-components": "^4.1.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.6.2",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "babel-plugin-replace-ts-export-assignment": "^0.0.2",
+    "@babel/preset-env": "^7.6.2",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.6.0",
+    "@babel/runtime": "^7.6.2",
+    "@types/lodash": "^4.14.124",
+    "@types/node": "^11.11.5",
+    "@types/react": "^16.4.18",
+    "@types/react-dom": "^16.0.9",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^0.1.19",
+    "eslint": "^6.8.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-react": "^7.18.3",
+    "html-webpack-plugin": "^3.2.0",
+    "tslint": "^5.10.0",
+    "tslint-config-airbnb": "^5.9.2",
+    "tslint-config-prettier": "^1.15.0",
+    "typescript": "^2.9.2",
+    "uglifyjs-webpack-plugin": "^2.1.1",
+    "webpack": "^4.43.0",
+    "webpack-bundle-analyzer": "^3.0.3",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "files": [
+    "js/output",
+    "README.md"
+  ]
+}
