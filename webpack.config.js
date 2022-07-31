@@ -15,7 +15,7 @@ DtsBundlePlugin.prototype.apply = function (compiler) {
     var dts = require('dts-bundle')
 
     dts.bundle({
-      name: 'sfuikit',
+      name: 'mui-lite',
       main: rootDir + '/src/declaration/index.d.ts',
       out: rootDir + '/js/output/index.d.ts',
       removeSource: false,
