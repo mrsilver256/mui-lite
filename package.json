@@ -1,6 +1,6 @@
 {
   "name": "mui-lite",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "A lite yet functional version of material ui",
   "main": "js/output/index.js",
   "scripts": {
@@ -23,7 +23,6 @@
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/plugin-proposal-object-rest-spread": "^7.6.2",
     "@babel/plugin-transform-runtime": "^7.6.2",
-    "babel-plugin-replace-ts-export-assignment": "^0.0.2",
     "@babel/preset-env": "^7.6.2",
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.6.0",
@@ -33,17 +32,18 @@
     "@types/react": "^16.4.18",
     "@types/react-dom": "^16.0.9",
     "babel-loader": "^8.0.6",
+    "babel-plugin-replace-ts-export-assignment": "^0.0.2",
     "clean-webpack-plugin": "^0.1.19",
     "eslint": "^6.8.0",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-react": "^7.18.3",
-    "html-webpack-plugin": "^3.2.0",
+    "html-webpack-plugin": "^5.5.0",
     "tslint": "^5.10.0",
     "tslint-config-airbnb": "^5.9.2",
     "tslint-config-prettier": "^1.15.0",
     "typescript": "^2.9.2",
     "uglifyjs-webpack-plugin": "^2.1.1",
-    "webpack": "^4.43.0",
+    "webpack": "^5.74.0",
     "webpack-bundle-analyzer": "^3.0.3",
     "webpack-cli": "^3.0.8",
     "webpack-dev-server": "^3.1.4",
@@ -53,5 +53,9 @@
     "js/output",
     "README.md"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrsilver256/mui-lite.git"
+  },
   "homepage": "https://github.com/mrsilver256/mui-lite"
 }
