@@ -21,8 +21,7 @@ export default class Select extends React.Component<UI.MultipleSelectWithSearchP
           (el: any) =>
             el.textContent == selectedItem[this.props.labelKey || 'label']
         )
-        // console.log('jsdklf', el2)
-        // el2 && el2.scrollIntoView()
+        el2 && el2.scrollIntoView({ block: 'center' })
       }
     }
   }
