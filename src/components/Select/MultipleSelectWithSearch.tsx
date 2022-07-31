@@ -2,7 +2,6 @@ import * as React from 'react'
 import styled from 'styled-components'
 import UIList from 'components/List'
 import Select from 'components/Select/Select'
-import { isArray } from 'util'
 import UIView, { Enhancer, BaseView } from 'components/View'
 import UIIcon from 'components/Icon'
 import UIText from 'components/Text'
@@ -86,7 +85,7 @@ export default class MultipleSelectWithSearch extends Select {
               {this.props.options &&
                 this.props.options
                   .filter((item: any) =>
-                    isArray(this.props.value)
+                    Array.isArray(this.props.value)
                       ? this.props.value.indexOf(item.value) >= 0
                       : item.value === this.props.value
                   )
@@ -166,7 +165,7 @@ export default class MultipleSelectWithSearch extends Select {
                   onClick={(e: any) => {
                     e.stopPropagation()
                     let result: any = []
-                    const temp: any[] = isArray(this.props.value)
+                    const temp: any[] = Array.isArray(this.props.value)
                       ? this.props.value.slice(0)
                       : [this.props.value]
                     const options: any[] = this.props.options
@@ -219,13 +218,13 @@ export default class MultipleSelectWithSearch extends Select {
                       transition: 0.3s;
                       `}
                     data-selected={
-                      (isArray(this.props.value)
+                      (Array.isArray(this.props.value)
                         ? this.props.value
                         : [this.props.value]
                       ).indexOf(item.value) >= 0
                     }
                     onClick={(e: any) => {
-                      const temp: any[] = isArray(this.props.value)
+                      const temp: any[] = Array.isArray(this.props.value)
                         ? this.props.value.slice(0)
                         : [this.props.value]
                       if (temp.indexOf(item.value) < 0) {
@@ -241,7 +240,7 @@ export default class MultipleSelectWithSearch extends Select {
                     ) : (
                       <UIText>{item.label}</UIText>
                     )}
-                    {(isArray(this.props.value)
+                    {(Array.isArray(this.props.value)
                       ? this.props.value
                       : [this.props.value]
                     ).indexOf(item.value) >= 0 ? (

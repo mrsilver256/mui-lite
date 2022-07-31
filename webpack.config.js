@@ -15,7 +15,7 @@ DtsBundlePlugin.prototype.apply = function (compiler) {
     var dts = require('dts-bundle')
 
     dts.bundle({
-      name: 'sfuikit',
+      name: 'mui-lite',
       main: rootDir + '/src/declaration/index.d.ts',
       out: rootDir + '/js/output/index.d.ts',
       removeSource: false,
@@ -29,7 +29,7 @@ module.exports = (env, argv) => {
 
   return {
     context: __dirname,
-    devtool: debug ? 'inline-sourcemap' : false,
+    devtool: !debug ? false : 'source-map',
     entry: debug ? './src/index.tsx' : './src/components/index.tsx',
     output: {
       path: debug ? __dirname + '/public' : __dirname + '/js/output',
@@ -38,9 +38,6 @@ module.exports = (env, argv) => {
     },
     target: debug ? 'web' : 'node',
     externals: debug ? '' : [nodeExternals()],
-    node: {
-      fs: 'empty',
-    },
     resolve: {
       alias: {
         components: path.resolve('src/components/'),
@@ -57,12 +54,12 @@ module.exports = (env, argv) => {
           },
         }),
       ],
+      moduleIds: 'deterministic'
     },
 
     plugins: debug
       ? [
           new CleanWebpackPlugin(['public']),
-          new webpack.HashedModuleIdsPlugin(),
           new HtmlWebpackPlugin({
             hash: true,
             template: 'src/html/index.html',
@@ -75,7 +72,6 @@ module.exports = (env, argv) => {
         ]
       : [
           new CleanWebpackPlugin(['public']),
-          new webpack.HashedModuleIdsPlugin(),
           new DtsBundlePlugin(),
           new webpack.IgnorePlugin({
             resourceRegExp: /^\.\/locale$/,

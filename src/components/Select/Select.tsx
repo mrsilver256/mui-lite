@@ -1,7 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import UIList from 'components/List'
-import { isArray } from 'util'
 import UIView, { Enhancer, BaseView } from 'components/View'
 import UIIcon from 'components/Icon'
 import ThemeValueProvider from 'components/ThemeValueProvider'
@@ -21,8 +20,7 @@ export default class Select extends React.Component<UI.MultipleSelectWithSearchP
           (el: any) =>
             el.textContent == selectedItem[this.props.labelKey || 'label']
         )
-        // console.log('jsdklf', el2)
-        // el2 && el2.scrollIntoView()
+        el2 && el2.scrollIntoView({ block: 'center' })
       }
     }
   }
@@ -267,7 +265,7 @@ export class MultipleSelect extends Select {
               {this.props.options &&
                 this.props.options
                   .filter((item: any) =>
-                    isArray(this.props.value)
+                    Array.isArray(this.props.value)
                       ? this.props.value.indexOf(item.value) >= 0
                       : item.value === this.props.value
                   )
@@ -321,13 +319,13 @@ export class MultipleSelect extends Select {
                     transition: 0.3s;
                     `}
                     data-selected={
-                      (isArray(this.props.value)
+                      (Array.isArray(this.props.value)
                         ? this.props.value
                         : [this.props.value]
                       ).indexOf(item.value) >= 0
                     }
                     onClick={(e: any) => {
-                      const temp: any[] = isArray(this.props.value)
+                      const temp: any[] = Array.isArray(this.props.value)
                         ? this.props.value.slice(0)
                         : [this.props.value]
                       if (temp.indexOf(item.value) < 0) {

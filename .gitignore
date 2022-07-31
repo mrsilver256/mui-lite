@@ -7,3 +7,4 @@ mobile/*
 node_modules/*
 .firebase/*
 .DS_Store
+.vscode/*
