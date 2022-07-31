@@ -1,7 +1,11 @@
 import * as React from 'react'
-import UI, { Brother } from '../../js/output'
-import { on, off, trigger } from '../../js/output'
-console.log(Brother, on, off, trigger)
+import UI from 'components'
+
+// Enable 2 lines below to test the lib
+// import UI, { Brother } from '../../js/output'
+// import { on, off, trigger } from '../../js/output'
+// ===
+
 export default class Main extends React.Component {
   state = {
     isOpen: false,
