@@ -1,6 +1,6 @@
 {
   "name": "mui-lite",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A lite yet functional version of material ui",
   "main": "js/output/index.js",
   "scripts": {
