@@ -1,6 +1,5 @@
 import * as React from 'react'
-import UI from 'components'
-
+import UI from '../../js/output'
 export default class Main extends React.Component {
   state = {
     isOpen: false,

@@ -11,7 +11,7 @@ var rootDir = path.resolve(__dirname)
 
 function DtsBundlePlugin() {}
 DtsBundlePlugin.prototype.apply = function (compiler) {
-  compiler.plugin('done', function () {
+  compiler.hooks.done.tap('done', function () {
     var dts = require('dts-bundle')
 
     dts.bundle({
