@@ -18,7 +18,7 @@ export default class Popup extends React.Component<UI.PopupProps> {
     const popupDOM = ReactDOM.findDOMNode(this.popupRef) as HTMLElement
     const popupBox = popupDOM.getBoundingClientRect()
 
-    let popupTop =
+    const popupTop =
       this.props.direction === 'up'
         ? triggerBox.top - popupBox.height
         : triggerBox.top + triggerBox.height

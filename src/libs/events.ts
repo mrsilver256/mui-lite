@@ -1,7 +1,7 @@
 let events: any[] = []
 
 export const on = (eventName: string, handler: any, eventKey: number) => {
-  let tempEvents = events.filter(e => e.eventKey === eventKey)
+  const tempEvents = events.filter(e => e.eventKey === eventKey)
   if (tempEvents.length > 0) {
     console.warn(
       'Event name ' +

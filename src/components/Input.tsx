@@ -18,10 +18,10 @@ export default class UIInput extends React.Component<UI.InputProps> {
   componentDidMount() {
     if (this.props.type == 'password')
       setTimeout(() => {
-        let inputs = document.querySelectorAll('input:-webkit-autofill')
+        const inputs = document.querySelectorAll('input:-webkit-autofill')
         if (inputs.length > 0) {
           for (let i = 0; i < inputs.length; i++) {
-            let e = inputs[i].parentElement
+            const e = inputs[i].parentElement
             e && e.setAttribute('data-active', 'true')
           }
         }
