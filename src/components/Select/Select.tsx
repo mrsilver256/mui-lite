@@ -9,14 +9,14 @@ import UIText from 'components/Text'
 export default class Select extends React.Component<UI.MultipleSelectWithSearchProps> {
   componentDidUpdate() {
     if (!this.props.isNotScroll && this.state.showPopup) {
-      let selectedItem =
+      const selectedItem =
         this.props.options &&
         this.props.options.find(
           (o) => o[this.props.valueKey || 'value'] == this.props.value
         )
       if (selectedItem) {
-        let el1 = document.querySelector('[data-component="select-popup"]')
-        let el2 = Array.from(el1 ? el1.querySelectorAll('div') : []).find(
+        const el1 = document.querySelector('[data-component="select-popup"]')
+        const el2 = Array.from(el1 ? el1.querySelectorAll('div') : []).find(
           (el: any) =>
             el.textContent == selectedItem[this.props.labelKey || 'label']
         )

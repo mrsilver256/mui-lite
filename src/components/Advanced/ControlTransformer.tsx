@@ -51,7 +51,7 @@ export default class ControlTransformer extends React.Component<ControlProps> {
 
   componentWillUnmount() {
     if (this.props.bind) {
-      let index = window.prefs[this.props.bind].instances.indexOf(this)
+      const index = window.prefs[this.props.bind].instances.indexOf(this)
       window.prefs[this.props.bind].instances.splice(index, 1)
     }
   }
